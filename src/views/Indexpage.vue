@@ -10,10 +10,28 @@
       </div>
     </section>
   </div>
+  <section>
+    <div class="flex justify-center mt-30 mb-2">
+      <p>WHAT WE DO</p>
+    </div> 
+    <div class="text-[#343f52] font-arial font-bold text-4xl">
+      <div class="flex justify-center">
+      <h1 class=""> The service we offer is specifically</h1>
+    </div>
+    <div class="flex justify-center">designed to meet your needs.</div>
+    </div>
+  </section>
+
+<section class="gap-8 mt-10 grid grid-cols-3">
+<div v-for="data in serData" :key="data" > 
+    <card :icons="data.icons" :heading="data.heading" :desc="data.desc" />
+  </div>
+</section>
 </template>
 
 <script setup>
-
+import serData from '@/components/serData.js'
+import Card from '@/components/Card.vue';
 </script>
 
 <style scoped></style>
